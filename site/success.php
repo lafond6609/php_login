@@ -1,19 +1,8 @@
-<?php
+<?
 session_start();
-if($_SESSION['username']!='')
-{
-header("location:login_form.php");
-	
+if (!isset($_SESSION['username'])){
+header("location:login.php");
+echo "Hello, $username";
 }
-else
-{
-echo'<h2>Success.</br>Welcome.'.$username.'</h2>';
-
-}
-
-
-
-
-
-
 ?>
+
